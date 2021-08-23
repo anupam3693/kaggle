@@ -61,8 +61,7 @@ def corr_col_to_be_dropped(df_train, corr_strength, col_cnt):
 
 col_drop = corr_col_to_be_dropped(X_train,0.41,1)
 print(col_drop)
-for i in col_drop:
-    numerical_cols.remove(i)
+[numerical_cols.remove(i) for i in col_drop]
 print(numerical_cols)
 
 
